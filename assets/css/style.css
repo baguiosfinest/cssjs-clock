@@ -1,25 +1,84 @@
 html {
   position: relative;
   min-height: 100%;
+  height: 100%;
 }
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-  padding-top: 5rem;
+  position: relative;
+  background: #4A4C4E;
+  min-height: 100%;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
 }
 
-.main-login{
-	padding-top: 100px;
-	text-align: center;
-}
-
-/* Footer */
-.footer {
+.bg{
+  background: url(/assets/img/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   position: absolute;
-  bottom: 0;
+  top: 0;
+  left: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
-  background-color: #f5f5f5;
+  height: 100%;
+  opacity: .5;
 }
+
+/* #D66042,#BFAB83,#F6F3EF,#616765,#4A4C4E */
+
+.clock{
+  width: 400px;
+  height: 400px;
+  border: 20px solid #F6F3EF;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px;
+  box-shadow: 
+    0 0 0px 4px rgba(0,0,0,.1),
+    inset 0 0 0 3px #eee,
+    inset 0 0 0 10px #000,
+    0 0 10px rgba(0, 0, 0, .2);
+    z-index: 9;
+}
+
+
+.clock-face{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /*transform: translate(-3px);*/
+  transform: rotate(90deg);
+}
+
+.hand{
+  width: 50%;
+  height: 6px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1,2.7,0.58,1);
+}
+
+.time{
+  font-size: 3.5em;
+  z-index: 9;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #000;
+  margin-bottom: 50px;
+  border: #D66042 10px solid;
+  padding: 0 30px;
+  width: 450px;
+  text-align: center;
+  border-radius: 200px;
+}
+
